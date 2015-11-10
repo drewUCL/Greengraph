@@ -7,6 +7,6 @@ This project radiates around the idea of measuring green pixal density in an att
 
 ###Example
 To use this programme, please follow the steps:
-	[1] Install
-	[2] Enter the two points you wish to analyse:
-		[Example] Glasgow ; Edinburgh 
+	1. Install
+	2. Enter the two points you wish to analyse:
+		2a. [Example] Glasgow ; Edinburgh 
