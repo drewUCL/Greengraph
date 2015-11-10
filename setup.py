@@ -8,4 +8,5 @@ setup(
     install_requires = ['argparse']
 )
 
+
 #NOTE: Not sure if scripts/graph is correct
