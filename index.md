@@ -9,3 +9,5 @@ density of a map image between two points to understand how much green space the
 is.   
 
 ###Further Detail
+
+######Further detail will be added as the project progresses
