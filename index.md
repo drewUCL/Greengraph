@@ -10,4 +10,5 @@ is.
 
 ###Further Detail
 
-######Further detail will be added as the project progresses
+The greengraph code folder is the repo that stores this projects python files. It has
+all the source code in it.
