@@ -1,6 +1,6 @@
-TO ADD ANY CITATIONS
+CITATIONS
 ====================
-Likely software enineering books
+MPHYG001: RESEARCH SOFTWARE ENGINEERING WITH PYTHON
 --------------------------------
 
-[1] [insert text] etc
+[1] To refer to the base code and packaging guidlines, please visit: [UCL Development](http://development.rc.ucl.ac.uk/training/engineering/)
