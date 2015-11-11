@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
 
+#NOTE: Not sure if scripts/Greengraph is correct
+
 setup(
     name = "Greengraph",
     version = "0.1",
@@ -7,6 +9,3 @@ setup(
     scripts = ['scripts/Greengraph'],
     install_requires = ['argparse']
 )
-
-
-#NOTE: Not sure if scripts/Greengraph is correct
