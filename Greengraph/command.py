@@ -12,6 +12,7 @@ def process():
    parser.add_argument('--out', '-o')
 
    arguments= parser.parse_args()
+   
 
    print Greengraph(arguments.from, arguments.to, arguments.steps, arguments.out) #from is also a python command is this an issue
 
