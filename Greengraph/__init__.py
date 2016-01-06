@@ -19,6 +19,6 @@ def main():
    arguments= parser.parse_args()
    
    this_chart = Greengraph(arguments.startPoint,arguments.endPoint)
-   this_data = this_chart.green_between(arguments.Steps)
+   this_data = this_chart.green_between(arguments.steps)
    this_plot.plot(this_data)
-   this_plot.savefig(arguments.Out)
+   this_plot.savefig(arguments.out)
