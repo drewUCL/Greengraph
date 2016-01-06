@@ -22,3 +22,4 @@ def main():
    this_data = this_chart.green_between(arguments.steps)
    this_plot.plot(this_data)
    this_plot.savefig(arguments.out)
+   this_plot.show()
