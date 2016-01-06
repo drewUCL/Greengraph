@@ -23,6 +23,7 @@ To use this programme, please follow the steps:
 3. Select optional arguments (--Steps ; --Out)
 4. Your command line should look something like: 
 
-**Greengraph --From 'London' --To 'Edinburgh' --Steps 50 --Out LDN_EDN.png**
+**Greengraph --from 'London' --to 'Edinburgh' --steps 50 --out LDN_EDN_RESULTS.jpg**
 
-The resulting plot will be saved in the root from where the command is called.
+The resulting plot will be saved where the command is called. <br>
+*e.g if you call the package from the desktop, the results file will be output there for the user to view.*
