@@ -13,4 +13,5 @@ setup(
 			'greengraph = greengraph:main',
 		],
 	},
+	license = 'MIT',
 )
