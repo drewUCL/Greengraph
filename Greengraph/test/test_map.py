@@ -7,14 +7,18 @@ import png
 import os
 
 #Test the Greengraph class
-def t_Map():
+def test_Map():
 	''' A function to test the initialisation of Map '''
+	pass
 	
-def t_green():
+def test_green():
 	''' [INSERT COMMENT] '''
+	pass
 	
-def t_count_green():
+def test_count_green():
 	''' [INSERT COMMENT] '''
+	pass
 	
-def t_show_green():
+def test_show_green():
 	''' [INSERT COMMENT] '''
+	pass

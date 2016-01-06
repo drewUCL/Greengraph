@@ -9,21 +9,21 @@ import os
 import yaml
 
 #Test the Greengraph class initialisation of start and end point
-def t_Greengraph():
+def test_Greengraph():
 	''' A function to test the initialisation of Greengraph '''
 	userInput = Greengraph('London','Glasgow')
 	assert_equal(userInput.start, 'London')
 	assert_equal(userInput.end, 'Glasgow')
 	
-def t_geolocate():
+def test_geolocate():
 	''' [INSERT COMMENT] '''
 	pass
 	
-def t_location_sequence():
+def test_location_sequence():
 	''' [INSERT COMMENT] '''
 	pass
 	
-def t_green_between():
+def test_green_between():
 	''' [INSERT COMMENT] '''
 	pass
 	
