@@ -1,7 +1,6 @@
 from graph import Greengraph
 from argparse import ArgumentParser
 from matplotlib import pyplot as this_plot
-import os
 
 def main():
    parser = ArgumentParser(description = "Generate Green Density Chart Based on Two Points")
@@ -14,9 +13,4 @@ def main():
    this_chart = Greengraph(arguments.startPoint,arguments.endPoint)
    this_data = this_chart.green_between(arguments.Steps)
    this_plot.plot(this_data)
-   
-   script_location = os.path.dirname(__file__)
-   print "SCRIPT LOCATION: %s" % script_location
-   results_location = os.path.join(script_location, 'Images/')
-   print "RESULTS LOCATION: %s" % results_location
-   this_plot.savefig(results_location + arguments.Out)
+   this_plot.savefig(arguments.Out)
