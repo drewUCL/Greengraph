@@ -11,8 +11,8 @@ The Greengraph library can be installed using the standard pip command: pip <lib
 - Go to Greengraph folder root
 - Now on your command line: 
 
-**Windows**    : python Greengraph/setup.py install
-**Other/Mac**  : sudo python Greengraph/setup.py install
+- **Windows**    : *python Greengraph/setup.py install*
+- **Other/Mac**  : *sudo python Greengraph/setup.py install*
 
 The Greengraph library is now ready to use on your machine.
 
@@ -20,8 +20,9 @@ The Greengraph library is now ready to use on your machine.
 To use this programme, please follow the steps:
 
 1. Install
-2. Enter the two points you wish to analyse (--From && --To) and select optional arguments (--Steps and output file name with extension --Out)
-3. Your command line should look something like: 
+2. Enter the two points you wish to analyse (--From ; --To)
+3. Select optional arguments (--Steps ; --Out)
+4. Your command line should look something like: 
 
 **Greengraph --From 'London' --To 'Edinburgh' --Steps 50 --Out LDN_EDN.png**
 
