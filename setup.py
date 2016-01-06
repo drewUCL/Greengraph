@@ -1,11 +1,16 @@
 from setuptools import setup, find_packages
 
-#NOTE: Not sure if scripts/Greengraph is correct
-
 setup(
     name = "Greengraph",
+	author = "Andrew D. Mann",
+	author_email = "Andrew.Mann.15@ucl.ac.uk",
     version = "0.1",
+	description = "This package will graph the quantity of green pixles relating to green land from one location to another",
     packages = find_packages(exclude=['*test']),
-    scripts = ['scripts/Greengraph'],
-    install_requires = ['argparse']
+    install_requires = ['argparse','numpy','requests','geopy','matplotlib'],
+	entry_points = {
+		'console_scripts': [ 
+			'greengraph = greengraph:main',
+		],
+	},
 )
