@@ -5,13 +5,17 @@ Greengraph
 This project radiates around the idea of measuring green pixal density in an attempt to graph how green an area is between two points. The library utilises Google Maps at defined intervals and analyses the green pixel thresholds. These are consequently plotted to visualise the amount of green landmass between two points. 
 
 ###Install Instructions
-The Greengraph library can be installed using the standard pip command: pip <library>. The installation process is as follows:
+The Greengraph library can be installed using the standard pip command: pip <library>. The installation process is as follows if one simply downloads the zip:
 - Download Greengraph to your machine
 - If the download has been compressed into a zip file, extract
 - Go to Greengraph folder root
 - Now on your command line:
 - **Windows**    : *python Greengraph/setup.py install*
 - **Other/Mac**  : *sudo python Greengraph/setup.py install*
+
+** pip install **
+- Assuming you have git shell, type: 
+*pip install git+https://github.com/drewUCL/Greengraph.git*
 
 The Greengraph library is now ready to use on your machine.
 
