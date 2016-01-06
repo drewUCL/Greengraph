@@ -13,4 +13,4 @@ def main():
    this_chart = Greengraph(arguments.startPoint,arguments.endPoint)
    this_data = this_chart.green_between(arguments.Steps)
    this_plot.plot(this_data)
-   this_plot.savefig(arguments.Out)
+   this_plot.savefig("Images/%s" % arguments.Out)
