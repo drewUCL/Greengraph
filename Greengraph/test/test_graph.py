@@ -1,12 +1,9 @@
 from nose.tools import assert_almost_equal, assert_in, assert_equal, assert_false, assert_true
-from ..greengraph import geolocate, maps_url_for, get_map_at
-from ..greengraph import count_green, is_green, location_sequence
-from ..greengraph import greengraph
 from ..graph import Greengraph
-from ..map import Map
-import png
-import os
-import yaml
+
+''' 
+To run the nose tests navigate into tests, then simply type 'nosetests' 
+'''
 
 #Test the Greengraph class initialisation of start and end point
 def test_Greengraph():
