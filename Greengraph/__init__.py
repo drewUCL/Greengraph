@@ -2,7 +2,7 @@ from graph import Greengraph
 from argparse import ArgumentParser
 from matplotlib import pyplot as this_plot
 
-def main():
+def process():
    ''' 
        Command Line Interface Allowing The User To Specify Arguments 
        This Function Then Plots The Results Where The Package Was Called From

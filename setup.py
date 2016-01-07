@@ -11,7 +11,7 @@ setup(
     install_requires = ['argparse','numpy','requests','geopy','matplotlib'],
 	entry_points = {
 		'console_scripts': [ 
-			'Greengraph = Greengraph:main',
+			'Greengraph = Greengraph:process',
 		],
 	},
 )
