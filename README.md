@@ -30,7 +30,7 @@ To use this programme, please follow the steps:
 **Greengraph --from 'London' --to 'Edinburgh' --steps 50 --out LDN_EDN_RESULTS.jpg**
 
 <br>
-** Output **
+**Output**
 <br>
 <center>
 <img src="https://raw.githubusercontent.com/drewUCL/Greengraph/master/Example%20Chart/LDN_EDN_RESULTS.jpg" alt="Result Output">
