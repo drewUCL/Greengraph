@@ -19,14 +19,14 @@ def test_geolocate():
 	Description: A function to test multiple locations and analyse the return of geolocate
 	Data Source: YAML
 	'''
-	tObject =  Greengraph('','') #initiate the Greengraph object to access geolocate
+	tObject =  Greengraph(0.0,0.0) #initiate the Greengraph object to access geolocate
 	with open(os.path.join(os.path.dirname(__file__),'fixtures','graph_test_data.yaml')) as data:
 		test_data = yaml.load(data)['test_geolocate']
 		for point in test_data:
 			city = point.pop('city')
 			latitude = point.pop('latitude')
 			longitude = point.pop('longitude')
-			assert_almost_equal(tObject.geolocate(city),(latitude,longitude))
+			assert_equal(round(tObject.geolocate(city),5),(latitude,longitude))
 	
 def test_location_sequence():
 	''' [INSERT COMMENT] '''
