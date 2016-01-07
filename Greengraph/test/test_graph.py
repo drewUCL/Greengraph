@@ -29,8 +29,20 @@ def test_geolocate():
 			assert_equal(tObject.geolocate(city),(latitude,longitude))
 	
 def test_location_sequence():
-	''' [INSERT COMMENT] '''
-	pass
+	''' 
+	Description: A function to test the order of co-ordinates used to generate a path that will allow the image to be generated and then decomposed to analyse the green pixel density.
+	Data: YAML	
+	'''
+	tObject =  Greengraph(0.0,0.0) #initiate the Greengraph object to access geolocate
+	with open(os.path.join(os.path.dirname(__file__),'fixtures','graph_test_data.yaml')) as data:
+		test_data = yaml.load(data)['test_location_sequence']
+		for point in test_data:
+			tFrom = point.pop('from_point')
+			tTo = point.pop('to_point')
+			tSteps = point.pop('steps')
+			tLocationMatrix = point.pop('location_matrix')
+			tResult = tObject.location_sequence(tFrom,tTo,tSteps)
+			assert_true(tResult == tLocationMatrix)
 	
 def test_green_between():
 	''' [INSERT COMMENT] '''
