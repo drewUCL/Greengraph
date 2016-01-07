@@ -23,7 +23,7 @@ def process():
    this_plot.plot(this_data)
    #Add Annotations
    this_plot.xlabel("Steps")
-   this_plot.ylabel("'Green Density'")
+   this_plot.ylabel("'Green Pixel Density'")
    this_plot.title("Green Land Density: " + arguments.startPoint + " - " + arguments.endPoint)
    #Save result and show user
    this_plot.savefig(arguments.out)
