@@ -26,9 +26,7 @@ def test_geolocate():
 			city = point.pop('city')
 			latitude = point.pop('latitude')
 			longitude = point.pop('longitude')
-			assert_equal(tObject.geolocate(city),(latitude,longitude))
-	
-	
+			assert_almost_equal(tObject.geolocate(city),(latitude,longitude))
 	
 def test_location_sequence():
 	''' [INSERT COMMENT] '''
