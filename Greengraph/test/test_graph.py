@@ -1,5 +1,6 @@
 from nose.tools import assert_almost_equal, assert_in, assert_equal, assert_false, assert_true
 from ..graph import Greengraph
+from mock import patch
 
 import os
 import yaml
@@ -48,10 +49,29 @@ def test_location_sequence():
 			for row in range(0,len(tResult)):
 				for element in range(0,len(tResult[row])):
 					assert_almost_equal(tResult[row][element],tLocationMatrix[row][element])
-	
+
+#Patching in .imread and .get 			
+@patch('matplotlib.image.imread')
+@patch('requests.get')
 def test_green_between():
 	'''
-	Description: 
+	Description: This function tests and Mocks the behavour 
 	Data Source: YAML	
 	'''
-	pass
+	with open(os.path.join(os.path.dirname(__file__),'fixtures','graph_test_data.yaml')) as data:
+		test_data = yaml.load(data)['test_green_between']
+		for point in test_data:
+			tFrom = point.pop('from_point')
+			tFromCoord = point.pop('from_location')
+			tTo = point.pop('to_point')
+			tToCoord = point.pop('to_location')
+			tSteps = point.pop('steps')
+			tReturnVector = point.pop('return_vector')
+			tObject = Greengraph(tFrom, tTo)
+			#Mock the from here -- possibly the map and store in dir
+			
+			''' [ TODO ]'''
+			
+			
+			
+			
