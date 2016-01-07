@@ -1,0 +1,29 @@
+# Longitude / Latitude Source: http://mondeca.com/index.php/en/any-place-en
+test_geolocate:
+ - city: "Glasgow"
+   latitude: 55.86424
+   longitude: -4.25181
+ - city: "Edinburgh"
+   latitude: 55.95325
+   longitude: -3.18827
+ - city: "Manchester"
+   latitude: 53.48076
+   longitude: -2.24263
+ - city: "London"
+   latitude: 51.50735
+   longitude: -0.12776
+ - city: "Paris"
+   latitude: 48.85661
+   longitude: 2.35222
+ - city: "Naples"
+   latitude: 26.14204
+   longitude: -81.79481
+ - city: "Istanbul"
+   latitude: 41.00824
+   longitude: 28.97836
+ - city: "Kuching"
+   latitude: 1.60768
+   longitude: 110.37854
+ - city: "San Francisco"
+   latitude: 37.77493
+   longitude: -122.41942

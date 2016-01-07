@@ -13,7 +13,7 @@ The Greengraph library can be installed using the standard pip command: pip <lib
 - **Windows**    : *python Greengraph/setup.py install*
 - **Other/Mac**  : *sudo python Greengraph/setup.py install*
 
-** pip install **
+**pip install**
 - Assuming you have git shell, type: 
 *pip install git+https://github.com/drewUCL/Greengraph.git*
 
