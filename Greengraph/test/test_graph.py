@@ -3,6 +3,9 @@ from ..graph import Greengraph
 
 import os
 import yaml
+import numpy
+import geopy
+
 
 #Test the Greengraph class initialisation of start and end point
 def test_Greengraph():
@@ -31,7 +34,7 @@ def test_geolocate():
 def test_location_sequence():
 	''' 
 	Description: A function to test the order of co-ordinates used to generate a path that will allow the image to be generated and then decomposed to analyse the green pixel density.
-	Data: YAML	
+	Data Source: YAML	
 	'''
 	tObject =  Greengraph(0.0,0.0) #initiate the Greengraph object to access geolocate
 	with open(os.path.join(os.path.dirname(__file__),'fixtures','graph_test_data.yaml')) as data:
@@ -41,16 +44,14 @@ def test_location_sequence():
 			tTo = point.pop('to_point')
 			tSteps = point.pop('steps')
 			tLocationMatrix = point.pop('location_matrix')
-			tResult = tObject.location_sequence(tFrom,tTo,tSteps)
-			assert_true(tResult == tLocationMatrix)
+			tResult = tObject.location_sequence(tObject.geolocate(tFrom),tObject.geolocate(tTo),tSteps)
+			for row in range(0,len(tResult)):
+				for element in range(0,len(tResult[row])):
+					assert_almost_equal(tResult[row][element],tLocationMatrix[row][element])
 	
 def test_green_between():
-	''' [INSERT COMMENT] '''
+	'''
+	Description: 
+	Data Source: YAML	
+	'''
 	pass
-	
-
-	
-	
-	
-	
-	
