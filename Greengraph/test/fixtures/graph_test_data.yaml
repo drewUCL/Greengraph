@@ -34,4 +34,21 @@ test_location_sequence:
    location_matrix: [[51.5073509,-0.1277583],[52.618826175,-0.892885475],[53.73030145,-1.65801265],[54.841776725,-2.423139825],[55.953252,-3.188267]]
    
 test_green_between:
- - 
+ - from_point: "London"
+   from_locations: [51.5073509,-0.1277583]
+   to_point: "Edinburgh"
+   to_location: [55.953252,-3.188267]
+   steps: 10
+   green_vector: [106719,157232,157358,153384,153508,158081,153354,159235,159232,105796]
+ - from_point: "Glasgow"
+   from_locations: [55.864237,-4.251806]
+   to_point: "Paris"
+   to_location: [48.856614,2.3522219]
+   steps: 10
+   green_vector: [144993,147948,152111,141847,152952,157129,159276,0,159220,85629]
+ - from_point: "Istanbul"
+   from_locations: [41.0082376,28.9783589]
+   to_point: "Naples"
+   to_location: [40.8517746,14.2681244]
+   steps: 10
+   green_vector: [39139,36943,57175,69388,89337,68117,3425,2886,37689,40854]

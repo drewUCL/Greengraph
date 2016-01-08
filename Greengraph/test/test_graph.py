@@ -53,7 +53,10 @@ def test_location_sequence():
 #Patching in .imread and .get 			
 @patch('matplotlib.image.imread')
 @patch('requests.get')
-def test_green_between():
+#Patching created objects: Map && Greengraph
+@patch('Map.count_green')
+@patch('Greengraph.geolocate')
+def test_green_between( mock_geolocate, mock_count_green, mock_imread, mock_get ):
 	'''
 	Description: This function tests and Mocks the behavour 
 	Data Source: YAML	
@@ -66,11 +69,15 @@ def test_green_between():
 			tTo = point.pop('to_point')
 			tToCoord = point.pop('to_location')
 			tSteps = point.pop('steps')
-			tReturnVector = point.pop('return_vector')
-			tObject = Greengraph(tFrom, tTo)
-			#Mock the from here -- possibly the map and store in dir
-			
-			''' [ TODO ]'''
+			tReturnVector = point.pop('green_vector')
+			''' 
+			Mock the geoloacte and count_green as we only want to test an isolated event of green_between
+			'''
+			mock_count_green.side_effect = [tFromCoord,tToCoord]
+			mock_geolocate.side_effect = tReturnVector
+			#get test pixel result
+			gPixel = Greengraph(tFrom,tTo).green_between(tSteps)
+			assert_equal(tReturnVector,gPixel)
 			
 			
 			
