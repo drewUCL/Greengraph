@@ -27,14 +27,12 @@ To use this programme, please follow the steps:
 3. Select optional arguments (--Steps ; --Out)
 4. Your command line should look something like: 
 
-**Greengraph --from 'London' --to 'Edinburgh' --steps 50 --out LDN_EDN_RESULTS.jpg**
+`Greengraph --from 'London' --to 'Edinburgh' --steps 50 --out LDN_EDN_RESULTS.jpg`
 
 <br>
 **Output**
 <br>
-<center>
 <img src="https://raw.githubusercontent.com/drewUCL/Greengraph/master/Example%20Chart/LDN_EDN_RESULTS.jpg" alt="Result Output">
-</center>
 
 The resulting plot will be saved where the command is called. <br>
 *e.g if you call the package from the desktop, the results file will be output there for the user to view.*
