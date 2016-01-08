@@ -31,8 +31,10 @@ class Map(object):
     def count_green(self, threshold = 1.1):
         return np.sum(self.green(threshold))
     
-    def show_green(data, threshold = 1.1):
+	#Typo in this function which has been uncovered when testing [data --> self]
+    def show_green(self, threshold = 1.1):
         green = self.green(threshold)
+		#Type in this function uncovered when testing [array --> np.array]
         out = green[:,:,np.newaxis]*array([0,1,0])[np.newaxis,np.newaxis,:]
         buffer = StringIO()
         result = img.imsave(buffer, out, format='png')
