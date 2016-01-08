@@ -35,7 +35,7 @@ class Map(object):
     def show_green(self, threshold = 1.1):
         green = self.green(threshold)
 		#Type in this function uncovered when testing [array --> np.array]
-        out = green[:,:,np.newaxis]*array([0,1,0])[np.newaxis,np.newaxis,:]
+        out = green[:,:,np.newaxis]*np.array([0,1,0])[np.newaxis,np.newaxis,:]
         buffer = StringIO()
         result = img.imsave(buffer, out, format='png')
         return buffer.getvalue()
