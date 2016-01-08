@@ -10,12 +10,12 @@ The Greengraph library can be installed using the standard pip command: pip <lib
 - If the download has been compressed into a zip file, extract
 - Go to Greengraph folder root
 - Now on your command line:
-- **Windows**    : *python Greengraph/setup.py install*
-- **Other/Mac**  : *sudo python Greengraph/setup.py install*
+- **Windows**    : `python Greengraph/setup.py install`
+- **Other/Mac**  : `sudo python Greengraph/setup.py install`
 
 **pip install**
 - Assuming you have git shell, type: 
-*pip install git+https://github.com/drewUCL/Greengraph.git*
+`pip install git+https://github.com/drewUCL/Greengraph.git`
 
 The Greengraph library is now ready to use on your machine.
 
