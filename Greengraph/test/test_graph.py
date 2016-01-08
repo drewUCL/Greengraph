@@ -20,7 +20,8 @@ def test_Greengraph():
 	userInput = Greengraph('London','Glasgow')
 	assert_equal(userInput.start, 'London')
 	assert_equal(userInput.end, 'Glasgow')
-	
+
+
 def test_geolocate():
 	''' 
 	Description: A function to test multiple locations and analyse the return of geolocate

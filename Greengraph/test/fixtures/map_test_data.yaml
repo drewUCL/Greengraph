@@ -1,0 +1,76 @@
+
+test_map:
+ - url: "http://maps.googleapis.com/maps/api/staticmap?"
+   latitude: 73.0
+   longitude: 51.0
+   params: {'style': 
+                   'feature:all|element:labels|visibility:off',
+                   'center': '73.0,51.0', 
+                   'zoom': 10,
+                   'maptype': 'satellite', 
+                   'sensor': 'false', 
+                   'size': '400x400'
+   }
+ - url: "http://maps.googleapis.com/maps/api/staticmap?"
+   latitude: 73.0
+   longitude: 51.0
+   params: {'style': 
+                   'feature:all|element:labels|visibility:off',
+                   'center': '73.0,51.0', 
+                   'zoom': 10,
+                   'sensor': 'false', 
+                   'size': '400x400'
+   }
+ - url: "http://maps.googleapis.com/maps/api/staticmap?"
+   latitude: 73.0
+   longitude: 51.0
+   params: {'style': 
+                   'feature:all|element:labels|visibility:off',
+                   'center': '73.0,51.0', 
+                   'zoom': 10,
+                   'maptype': 'satellite', 
+                   'sensor': 'true', 
+                   'size': '400x400'
+   }
+ - url: "http://maps.googleapis.com/maps/api/staticmap?"
+   latitude: 73.0
+   longitude: 51.0
+   params: {'style': 
+                   'feature:all|element:labels|visibility:off',
+                   'center': '73.0,51.0', 
+                   'zoom': 10,
+                   'maptype': 'satellite', 
+                   'sensor': 'false', 
+                   'size': '100x200'
+   }
+ - url: "http://maps.googleapis.com/maps/api/staticmap?"
+   latitude: 73.0
+   longitude: 51.0
+   params: {'style': 
+                   'feature:all|element:labels|visibility:off',
+                   'center': '73.0,51.0', 
+                   'zoom': 20,
+                   'maptype': 'satellite', 
+                   'sensor': 'false', 
+                   'size': '400x400'
+   }
+   
+test_green: 
+ - pixel_colour: "green"
+   latitude: 51.5073509
+   longitude: -0.1277583
+   zoom: 10
+ - pixel_colour: "red"
+   latitude: 51.5073509
+   longitude: -0.1277583
+   zoom: 10
+ - pixel_colour: "blue"
+   latitude: 51.5073509
+   longitude: -0.1277583
+   zoom: 10
+
+
+
+   
+   
+   
