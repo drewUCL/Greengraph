@@ -1,11 +1,14 @@
 from nose.tools import assert_almost_equal, assert_in, assert_equal, assert_false, assert_true
 from ..graph import Greengraph
-from mock import patch
+from ..map import Map
+from matplotlib import image as img #change
 
 import os
 import yaml
 import numpy
 import geopy
+import requests
+import mock
 
 
 #Test the Greengraph class initialisation of start and end point
@@ -50,12 +53,11 @@ def test_location_sequence():
 				for element in range(0,len(tResult[row])):
 					assert_almost_equal(tResult[row][element],tLocationMatrix[row][element])
 
-#Patching in .imread and .get 			
-@patch('matplotlib.image.imread')
-@patch('requests.get')
-#Patching created objects: Map && Greengraph
-@patch('Map.count_green')
-@patch('Greengraph.geolocate')
+#CHANGE
+@mock.patch.object(img, 'imread')
+@mock.patch.object(requests, 'get')
+@mock.patch.object(Greengraph, 'geolocate')
+@mock.patch.object(Map, 'count_green')
 def test_green_between( mock_geolocate, mock_count_green, mock_imread, mock_get ):
 	'''
 	Description: This function tests and Mocks the behavour 
@@ -65,7 +67,7 @@ def test_green_between( mock_geolocate, mock_count_green, mock_imread, mock_get 
 		test_data = yaml.load(data)['test_green_between']
 		for point in test_data:
 			tFrom = point.pop('from_point')
-			tFromCoord = point.pop('from_location')
+			tFromCoord = point.pop('from_locations')
 			tTo = point.pop('to_point')
 			tToCoord = point.pop('to_location')
 			tSteps = point.pop('steps')
@@ -78,7 +80,3 @@ def test_green_between( mock_geolocate, mock_count_green, mock_imread, mock_get 
 			#get test pixel result
 			gPixel = Greengraph(tFrom,tTo).green_between(tSteps)
 			assert_equal(tReturnVector,gPixel)
-			
-			
-			
-			
