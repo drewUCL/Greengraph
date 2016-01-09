@@ -31,9 +31,8 @@ def process():
    parser.add_argument('--Steps', '-S', type = int, help = 'Enter the number of steps you wish to chart. [INT]', default = 10)
    parser.add_argument('--Out', '-O', help = 'Enter the file name you wish to call the image with extension (Default=.png) [STRING]', default = 'output.png')
    
-   print From
-   print To
-   
    arguments= parser.parse_args()
    
-   chart(arguments.StartLocation,arguments.EndLocation,arguments.Steps,arguments.Out)
+   print arguments 
+   
+   chart(arguments.From,arguments.To,arguments.Steps,arguments.Out)
