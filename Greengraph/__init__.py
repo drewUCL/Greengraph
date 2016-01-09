@@ -28,8 +28,8 @@ def process():
    parser.add_argument('To', action='store', help='Enter an end location here such as Oxford. [STRING]') 
    
    #Optional Arguments
-   parser.add_argument('--Steps', '-S',action='store_true',  type=int, help='Enter the number of steps you wish to chart. [INT]', default=10)
-   parser.add_argument('--Out', '-O', action='store_true', help='Enter the file name you wish to call the image (Default=PNG)', default='output.png')
+   parser.add_argument('--Steps', '-S', type=int, help='Enter the number of steps you wish to chart. [INT]', default=10)
+   parser.add_argument('--Out', '-O', help='Enter the file name you wish to call the image (Default=PNG)', default='output.png')
    
    arguments= parser.parse_args()
    
