@@ -32,5 +32,8 @@ def process():
    parser.add_argument('--Out', '-O', help = 'Enter the file name you wish to call the image with extension (Default=.png) [STRING]', default = 'output.png')
    
    arguments= parser.parse_args()
-   
+   print arguments.From
+   print arguments.To
+   print arguments.Steps
+   print arguments.Out
    chart(arguments.From,arguments.To,arguments.Steps,arguments.Out)
