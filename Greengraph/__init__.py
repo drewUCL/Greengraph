@@ -21,7 +21,7 @@ def process():
 	   For Example, If It Was Called From The Desktop, The Resulting Chart Would Be Saved On The Desktop For The User.
    '''
    
-   parser = ArgumentParser(prog='Greengraph', usage='Greengraph [-h] From To [--Steps STEPS] [--Out OUT]' description = "Generate Green Density Chart Based on Two Points")
+   parser = ArgumentParser(prog='Greengraph', usage='Greengraph [-h] From To [--Steps STEPS] [--Out OUT]', description = "Generate Green Density Chart Based on Two Points")
    
    #Positional Arguments - NOTE: deleted 'dest' as cannot be used with positional arguments
    parser.add_argument('From', action='store', help='Enter a start location here such as London. [STRING]')
