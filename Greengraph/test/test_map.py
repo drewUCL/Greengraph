@@ -66,7 +66,7 @@ def process_data(px,option):
 	if (option == 0):
 		pixels = ([[0.0,1.0,0.0]] * px) + ([[1.0,1.0,1.0]] * (100-px))
 	elif (option == 1):
-		pixels = ([[0,1,0]] * px) + ([[0,0,0]] * (100-px))
+		pixels = ([[0.0,1.0,0.0]] * px) + ([[0.0,0.0,0.0]] * (100-px))
         pixels = np.array(pixels)
         return pixels.reshape(10,10,3)
 
