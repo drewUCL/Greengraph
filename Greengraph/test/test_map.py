@@ -4,17 +4,17 @@ from nose.tools import assert_equal, assert_raises
 from matplotlib import image as im
 
 import unittest 
-
 import yaml
 import os
 import numpy as np
 import mock
 import requests
+import png #pip install pypng
 
 
 @mock.patch.object(requests,'get')
 @mock.patch.object(im,'imread')
-def test_map( mock_imread,mock_get ):
+def test_map(mock_imread,mock_get):
 	'''
 	Description: 
 	Data: YAML
@@ -61,6 +61,36 @@ def test_green():
 				pixel_matrix[:, :, 2] = 1
 				Mapping.__setattr__('pixels',pixel_matrix)
 				assert_equal(Mapping.green(threshold).all(),False)
+
+def process_data(px,option):
+	if (option == 0):
+		pixels = ([[0.0,1.0,0.0]] * px) + ([[1.0,1.0,1.0]] * (100-px))
+	elif (option == 1):
+		pixels = ([[0,1,0]] * px) + ([[0,0,0]] * (100-px))
+        pixels = np.array(pixels)
+        return pixels.reshape(10,10,3)
+
+def test_count_green():
+    MockMap = Map(20.123,15.123)
+    option = 0
+    for px in range(1,100):
+        MockMap.pixels = process_data(px,option)
+        assert_equal(MockMap.count_green(), px)
+
+@mock.patch.object(requests,'get')
+@mock.patch.object(im,'imread')
+@mock.patch.object(im,'imsave')
+def test_show_green(mock_imsave,mock_imread,mock_get):
+    MockMap = Map(20.123,15.123)
+    option = 1
+    for px in range(1,100): 
+        MockMap.pixels = process_data(px,option)
+        MockMap.show_green()
+        assert np.array_equal(mock_imsave.call_args[0][1],process_data(px,option))
+    assert_equal(mock_imsave.call_args[1], {'format':'png'})
+
+	
+	
 				
 			
 			
