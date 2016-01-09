@@ -24,13 +24,13 @@ def process():
    parser = ArgumentParser(description = "Generate Green Density Chart Based on Two Points")
    
    #Positional Arguments - NOTE: deleted 'dest' as cannot be used with positional arguments
-   parser.add_argument('from', action='store', help='Enter a start location here such as London. [STRING]')
-   parser.add_argument('to', action='store', help='Enter an end location here such as Oxford. [STRING]') 
+   parser.add_argument('From', action='store', help='Enter a start location here such as London. [STRING]')
+   parser.add_argument('To', action='store', help='Enter an end location here such as Oxford. [STRING]') 
    
    #Optional Arguments
-   parser.add_argument('--steps', '-s',action='store_true',  type=int, help='Enter the number of steps you wish to chart. [INT]', default=10)
-   parser.add_argument('--out', '-o', action='store_true', help='Enter the file name you wish to call the image (Default=PNG)', default='output.png')
+   parser.add_argument('--Steps', '-S',action='store_true',  type=int, help='Enter the number of steps you wish to chart. [INT]', default=10)
+   parser.add_argument('--Out', '-O', action='store_true', help='Enter the file name you wish to call the image (Default=PNG)', default='output.png')
    
    arguments= parser.parse_args()
    
-   chart(arguments.from,arguments.to,arguments.steps,arguments.out)
+   chart(arguments.From,arguments.To,arguments.Steps,arguments.Out)
