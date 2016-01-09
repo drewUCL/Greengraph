@@ -24,12 +24,12 @@ def process():
    parser = ArgumentParser(prog='Greengraph', usage='Greengraph [-h] From To [--Steps STEPS] [--Out OUT]', description = "Generate Green Density Chart Based on Two Points")
    
    #Positional Arguments - NOTE: deleted 'dest' as cannot be used with positional arguments
-   parser.add_argument('From', action='store', help='Enter a start location here such as London. [STRING]')
-   parser.add_argument('To', action='store', help='Enter an end location here such as Oxford. [STRING]') 
+   parser.add_argument('From', help='Enter a start location here such as London. [STRING]')
+   parser.add_argument('To', help='Enter an end location here such as Oxford. [STRING]') 
    
    #Optional Arguments
    parser.add_argument('--Steps', '-S', type=int, help='Enter the number of steps you wish to chart. [INT]', default=10)
-   parser.add_argument('--Out', '-O', help='Enter the file name you wish to call the image (Default=PNG)', default='output.png')
+   parser.add_argument('--Out', '-O', help='Enter the file name you wish to call the image with extension (Default=.png) [STRING]', default='output.png')
    
    arguments= parser.parse_args()
    
