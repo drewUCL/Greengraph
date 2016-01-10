@@ -32,7 +32,7 @@ To use this programme, please follow the steps:
 
 **Output**
 <br>
-<img src="https://raw.githubusercontent.com/drewUCL/Greengraph/master/Example%20Chart/LDN_EDN_RESULTS.jpg" alt="Result Output">
+<img src="https://raw.githubusercontent.com/drewUCL/Greengraph/master/Greengraph/Example%20Chart/LDN_EDN_RESULTS.jpg" alt="Result Output">
 
 The resulting plot will be saved where the command is called. <br>
 *e.g if you call the package from the desktop, the results file will be output there for the user to view. Additionally the chart will show automatically on the users screen when executed allowing quick and easy analysis.*
