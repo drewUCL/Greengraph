@@ -23,19 +23,18 @@ def test_command():
 @mock.patch.object(py, 'show')
 @mock.patch.object(py, 'savefig')
 @mock.patch.object(py, 'plot')
-#@mock.patch.object(py, 'xlabel')
-#@mock.patch.object(py, 'ylabel')
-#@mock.patch.object(py, 'title')
+@mock.patch.object(py, 'xlabel')
+@mock.patch.object(py, 'ylabel')
+@mock.patch.object(py, 'title')
 @mock.patch('Greengraph.map.Map.show_green')
 @mock.patch('Greengraph.map.Map.count_green')
 @mock.patch('Greengraph.graph.Greengraph.location_sequence')
 @mock.patch('Greengraph.graph.Greengraph.geolocate')
 @mock.patch('Greengraph.graph.Greengraph.green_between')
-#mock_xlabel, mock_ylabel, mock_title
-def test_chart(mock_show, mock_savefig, mock_plot, mock_green_between, mock_show_green, mock_count_green,mock_location_sequence, mock_geolocate):
+def test_chart(mock_show, mock_savefig, mock_plot, mock_xlabel, mock_ylabel, mock_title, mock_green_between, mock_show_green, mock_count_green,mock_location_sequence, mock_geolocate):
 	arguments = parser.parse_args(['--from','London','--to','Edinburgh','--steps','12','--out','LDN_EDN.png'])
 	chart(arguments.StartLocation,arguments.EndLocation,arguments.steps,arguments.out)
-	mock_green_between.assert_called_with((100.12,100.12),(110.34,110.34),12)
+	mock_green_between.assert_called_with(12)
 
 @mock.patch('Greengraph.__init__.parser.parse_args')
 @mock.patch('Greengraph.__init__.chart')
