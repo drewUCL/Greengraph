@@ -1,7 +1,7 @@
 Greengraph <br>
 =============================================
 
-<a href="https://travis-ci.org/drewUCL/Greengraph/builds/101419288"><img src="https://travis-ci.org/drewUCL/Greengraph.svg?branch=master"></a>
+<a href="https://travis-ci.org/drewUCL/Greengraph"><img src="https://travis-ci.org/drewUCL/Greengraph.svg?branch=master"></a>
 ###Introduction
 This project radiates around the idea of measuring green pixal density in an attempt to graph how green an area is between two points. The library utilises Google Maps at defined intervals and analyses the green pixel thresholds. These are consequently plotted to visualise the amount of green landmass between two points. 
 
