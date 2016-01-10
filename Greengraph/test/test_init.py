@@ -1,4 +1,4 @@
-from argparse import ArgumentParser
+from ..__init__ import parser
 from nose.tools import assert_equal
 
 def test_command():

@@ -31,3 +31,6 @@ def process():
    '''
    arguments= parser.parse_args()
    chart(arguments.StartLocation,arguments.EndLocation,arguments.Steps,arguments.Out)
+   
+if __name__ == "__main__":
+	process()
