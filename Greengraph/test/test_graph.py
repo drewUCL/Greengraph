@@ -11,18 +11,20 @@ import requests
 import mock
 
 
-#Test the Greengraph class initialisation of start and end point
-def test_Greengraph():
+
+@mock.patch.object(geopy.geocoders, 'GoogleV3')
+def test_Greengraph(mock_geocoders):
 	''' 
 	Description: A function to test the initialisation of Greengraph 
 	Data Structure: Static [ within this function ['London','Glasgow'] ]
 	'''
 	userInput = Greengraph('London','Glasgow')
-	assert_equal(userInput.start, 'London')
-	assert_equal(userInput.end, 'Glasgow')
+	mock_geocoders.assert_equal(userInput.start, 'London')
+	mock_geocoders.assert_equal(userInput.end, 'Glasgow')
 
 
-def test_geolocate():
+@mock.patch.object(geopy.geocoders.GoogleV3, 'geocode')
+def test_geolocate(mock_geocode):
 	''' 
 	Description: A function to test multiple locations and analyse the return of geolocate
 	Data Source: YAML
@@ -34,7 +36,7 @@ def test_geolocate():
 			city = point.pop('city')
 			latitude = point.pop('latitude')
 			longitude = point.pop('longitude')
-			assert_equal(tObject.geolocate(city),(latitude,longitude))
+			mock_geocode.assert_equal(tObject.geolocate(city),(latitude,longitude))
 	
 def test_location_sequence():
 	''' 
