@@ -1,4 +1,4 @@
-from ..__init__ import process, parser
+from ..__init__ import *  #process, parser
 from nose.tools import assert_equal
 
 def test_command():

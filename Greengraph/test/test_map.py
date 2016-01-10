@@ -9,7 +9,6 @@ import os
 import numpy as np
 import mock
 import requests
-import png #pip install pypng
 
 
 @mock.patch.object(requests,'get')
