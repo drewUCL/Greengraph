@@ -91,11 +91,11 @@ def test_show_green(mock_imsave,mock_imread,mock_get):
 	Description: Testing the number of pixels associated with a specific location within show_green.
 	Data Source: Within Function
 	'''
-    MockMap = Map(20.123,15.123)
-    option = 1
-    for px in range(1,100): 
-        MockMap.pixels = process_data(px,option)
-        MockMap.show_green()
-        assert np.array_equal(mock_imsave.call_args[0][1],process_data(px,option))
-    assert_equal(mock_imsave.call_args[1], {'format':'png'})
+	MockMap = Map(20.123,15.123)
+	option = 1
+	for px in range(1,100): 
+		MockMap.pixels = process_data(px,option)
+		MockMap.show_green()
+		assert np.array_equal(mock_imsave.call_args[0][1],process_data(px,option))
+	assert_equal(mock_imsave.call_args[1], {'format':'png'})
 
