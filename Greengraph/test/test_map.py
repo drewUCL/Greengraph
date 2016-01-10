@@ -79,9 +79,9 @@ def test_count_green():
 	'''
 	MockMap = Map(20.123,15.123)
 	option = 0
-    for px in range(1,100):
-        MockMap.pixels = process_data(px,option)
-        assert_equal(MockMap.count_green(), px)
+	for px in range(1,100):
+		MockMap.pixels = process_data(px,option)
+		assert_equal(MockMap.count_green(), px)
 
 @mock.patch.object(requests,'get')
 @mock.patch.object(im,'imread')
