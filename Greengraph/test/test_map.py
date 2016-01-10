@@ -10,13 +10,12 @@ import numpy as np
 import mock
 import requests
 
-
 @mock.patch.object(requests,'get')
 @mock.patch.object(im,'imread')
 def test_map(mock_imread,mock_get):
 	'''
-	Description: 
-	Data: YAML
+	Description: A function to test the mapping function  in which a number of different locations and parameters are tested
+	Data Source: YAML
 	'''
 	with open(os.path.join(os.path.dirname(__file__),'fixtures','map_test_data.yaml')) as data:
 		test_data = yaml.load(data)['test_map']
@@ -38,7 +37,7 @@ def test_map(mock_imread,mock_get):
 def test_green():
 	'''
 	Description: This function tests the green() function with blanket colours - solid green, solid red and solid blue
-	Data: YAML
+	Data Source: YAML
 	'''
 	with open(os.path.join(os.path.dirname(__file__),'fixtures','map_test_data.yaml')) as data:
 		test_data = yaml.load(data)['test_green']
@@ -62,6 +61,10 @@ def test_green():
 				assert_equal(Mapping.green(threshold).all(),False)
 
 def process_data(px,option):
+	'''
+	Description: This is a reusable function to process the RGB pixel data from count_green and show_green 
+	Data Source: Within Function and provided by test_count_green or test_show_green that provide arguments to this function
+	'''
 	if (option == 0):
 		pixels = ([[0.0,1.0,0.0]] * px) + ([[1.0,1.0,1.0]] * (100-px))
 	elif (option == 1):
@@ -70,6 +73,10 @@ def process_data(px,option):
         return pixels.reshape(10,10,3)
 
 def test_count_green():
+	'''
+	Description: A function to test the number of pixels is consistant when processing an image
+	Data Source: Within Function
+	'''
     MockMap = Map(20.123,15.123)
     option = 0
     for px in range(1,100):
@@ -80,6 +87,10 @@ def test_count_green():
 @mock.patch.object(im,'imread')
 @mock.patch.object(im,'imsave')
 def test_show_green(mock_imsave,mock_imread,mock_get):
+	'''
+	Description: Testing the number of pixels associated with a specific location within show_green.
+	Data Source: Within Function
+	'''
     MockMap = Map(20.123,15.123)
     option = 1
     for px in range(1,100): 
@@ -88,8 +99,3 @@ def test_show_green(mock_imsave,mock_imread,mock_get):
         assert np.array_equal(mock_imsave.call_args[0][1],process_data(px,option))
     assert_equal(mock_imsave.call_args[1], {'format':'png'})
 
-	
-	
-				
-			
-			

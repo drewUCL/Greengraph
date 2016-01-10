@@ -10,18 +10,15 @@ import geopy
 import requests
 import mock
 
-
-
 @mock.patch.object(geopy.geocoders, 'GoogleV3')
 def test_Greengraph(mock_geocoders):
 	''' 
 	Description: A function to test the initialisation of Greengraph 
-	Data Structure: Static [ within this function ['London','Glasgow'] ]
+	Data Source: Within Function
 	'''
 	userInput = Greengraph('London','Glasgow')
 	mock_geocoders.assert_equal(userInput.start, 'London')
 	mock_geocoders.assert_equal(userInput.end, 'Glasgow')
-
 
 @mock.patch.object(geopy.geocoders.GoogleV3, 'geocode')
 def test_geolocate(mock_geocode):
@@ -74,9 +71,8 @@ def test_green_between( mock_geolocate, mock_count_green, mock_imread, mock_get 
 			tToCoord = point.pop('to_location')
 			tSteps = point.pop('steps')
 			tReturnVector = point.pop('green_vector')
-			''' 
-			Mock the geoloacte and count_green as we only want to test an isolated event of green_between
-			'''
+			
+			#Mock geoloacte and count_green as we only want to test an isolated event of green_between
 			mock_count_green.side_effect = [tFromCoord,tToCoord]
 			mock_geolocate.side_effect = tReturnVector
 			#Get test pixel result
