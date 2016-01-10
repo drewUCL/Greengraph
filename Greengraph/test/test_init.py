@@ -1,6 +1,6 @@
 import mock
 
-from ..__init__ import parser
+from ..__init__ import parser, chart, process
 from ..graph import Greengraph as GR
 
 from nose.tools import assert_equal
