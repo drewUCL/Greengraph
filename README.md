@@ -1,4 +1,5 @@
-Greengraph
+Greengraph <br>
+<a href="https://travis-ci.org/drewUCL/Greengraph"><img src="https://travis-ci.org/drewUCL/Greengraph.svg?branch=master"></a>
 =============================================
 
 ###Introduction
