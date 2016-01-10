@@ -2,7 +2,7 @@ from graph import Greengraph
 from argparse import ArgumentParser
 from matplotlib import pyplot as this_plot
 
-#Global Variables - These have been moved from the process function to glabal variabes to allow me to test the command line
+#Global Variables - These have been moved from the process function to global variabes to allow me to test the command line
 parser = ArgumentParser( prog="Greengraph", description = "Generate Green Density Chart Based on Two Points")   
 parser.add_argument('--from', '-f', help = 'Enter a start location here such as London. [STRING]',dest='StartLocation', required=True)
 parser.add_argument('--to',  '-t', help = 'Enter an end location here such as Oxford. [STRING]',dest='EndLocation', required=True) 
