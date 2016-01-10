@@ -34,7 +34,7 @@ def test_command():
 def test_chart(mock_show, mock_savefig, mock_plot, mock_xlabel, mock_ylabel, mock_title, mock_green_between, mock_show_green, mock_count_green,mock_location_sequence, mock_geolocate):
 	arguments = parser.parse_args(['--from','London','--to','Edinburgh','--steps','12','--out','LDN_EDN.png'])
 	chart(arguments.StartLocation,arguments.EndLocation,arguments.steps,arguments.out)
-	mock_green_between.assert_called_with(12)
+	mock_green_between.assert_called_with("'Green Pixel Density'")
 
 @mock.patch('Greengraph.__init__.parser.parse_args')
 @mock.patch('Greengraph.__init__.chart')
