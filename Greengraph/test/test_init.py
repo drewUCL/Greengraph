@@ -20,15 +20,21 @@ def test_command():
 
 
 #ISSUE: no display name and no $DISPLAY environment variable
-'''@mock.patch.object(py, 'show')
+@mock.patch.object(py, 'show')
 @mock.patch.object(py, 'savefig')
 @mock.patch.object(py, 'plot')
+@mock.patch.object(py, 'xlabel')
+@mock.patch.object(py, 'ylabel')
+@mock.patch.object(py, 'title')
 @mock.patch.object(GR, 'green_between')
+@moch.patch('Greengraph.map.Map.show_green')
+@moch.patch('Greengraph.map.Map.count_green')
+@moch.patch('Greengraph.graph.Greengraph.location_sequence')
+@moch.patch('Greengraph.graph.Greengraph.geolocate')
 def test_chart(mock_show, mock_savefig, mock_plot, mock_green_between):
 	arguments = parser.parse_args(['--from','London','--to','Edinburgh','--steps','12','--out','LDN_EDN.png'])
 	chart(arguments.StartLocation,arguments.EndLocation,arguments.steps,arguments.out)
-	mock_green_between.assert_called_with(12)
-'''
+	mock_green_between.assert_called_with((100.12,100.12),(110.34,110.34),12)
 
 @mock.patch('Greengraph.__init__.parser.parse_args')
 @mock.patch('Greengraph.__init__.chart')
