@@ -1,0 +1,6 @@
+language: python
+python: 
+ - "2.7"
+install: "pip install geopy numpy matplotlib requests StringIO coverage"
+#https://pypi.python.org/pypi/coverage
+script: nosetests --with-coverage --cover-package Greengraph

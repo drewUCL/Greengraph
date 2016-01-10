@@ -54,7 +54,6 @@ def test_location_sequence():
 				for element in range(0,len(tResult[row])):
 					assert_almost_equal(tResult[row][element],tLocationMatrix[row][element])
 
-#CHANGE
 @mock.patch.object(img, 'imread')
 @mock.patch.object(requests, 'get')
 @mock.patch.object(Greengraph, 'geolocate')
@@ -78,6 +77,6 @@ def test_green_between( mock_geolocate, mock_count_green, mock_imread, mock_get 
 			'''
 			mock_count_green.side_effect = [tFromCoord,tToCoord]
 			mock_geolocate.side_effect = tReturnVector
-			#get test pixel result
+			#Get test pixel result
 			gPixel = Greengraph(tFrom,tTo).green_between(tSteps)
 			assert_equal(tReturnVector,gPixel)
