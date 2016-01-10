@@ -28,5 +28,5 @@ def test_chart(mock_show, mock_savefig, mock_plot, mock_green_between):
 	Description: A function to test if the charting function is in operation
 	'''
 	arguments = parser.parse_args(['--from','London','--to','Edinburgh','--steps','12','--out','LDN_EDN.png'])
-	chart(arguments.StartLocation,arguments.EndLocation,arguments.Steps,arguments.Out)
+	chart(arguments.StartLocation,arguments.EndLocation,arguments.steps,arguments.Out)
 	mock_green_between.assert_called_with(12)

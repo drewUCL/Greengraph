@@ -30,7 +30,7 @@ def process():
 	   For Example, If It Was Called From The Desktop, The Resulting Chart Would Be Saved On The Desktop For The User.
    '''
    arguments= parser.parse_args()
-   chart(arguments.StartLocation,arguments.EndLocation,arguments.Steps,arguments.Out)
+   chart(arguments.StartLocation,arguments.EndLocation,arguments.steps,arguments.out)
    
 if __name__ == "__main__":
 	process()
