@@ -30,6 +30,4 @@ def process():
    
    arguments= parser.parse_args()
    
-   print arguments 
-   
    chart(arguments.StartLocation,arguments.EndLocation,arguments.Steps,arguments.Out)
