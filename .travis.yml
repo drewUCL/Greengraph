@@ -1,6 +1,9 @@
+#Useful Sources
+#https://books.google.co.uk/books?id=_e-ZBQAAQBAJ&pg=PT320&lpg=PT320&dq=learning+python+testing+Name+Stmts+Miss+Cover+Missing&source=bl&ots=m0NWCytYwi&sig=QHkXW4fz9fW_6xNRgmb__KzCLrQ&hl=en&sa=X&ved=0ahUKEwjJlreZ0J_KAhWJ6xoKHZ-wBmMQ6AEIKDAC#v=onepage&q=learning%20python%20testing%20Name%20Stmts%20Miss%20Cover%20Missing&f=false
+#https://pypi.python.org/pypi/coverage
+
 language: python
 python: 
  - "2.7"
 install: "pip install geopy numpy matplotlib requests mock pyyaml coverage"
-#https://pypi.python.org/pypi/coverage
 script: nosetests --with-coverage --cover-package Greengraph
