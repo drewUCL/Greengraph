@@ -26,7 +26,6 @@ def test_command():
 @mock.patch.object(py, 'xlabel')
 @mock.patch.object(py, 'ylabel')
 @mock.patch.object(py, 'title')
-@mock.patch.object(GR, 'green_between')
 @mock.patch('Greengraph.map.Map.show_green')
 @mock.patch('Greengraph.map.Map.count_green')
 @mock.patch('Greengraph.graph.Greengraph.location_sequence')
