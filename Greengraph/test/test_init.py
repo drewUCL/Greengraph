@@ -6,8 +6,6 @@ from ..graph import Greengraph as GR
 from nose.tools import assert_equal
 from matplotlib import pyplot as py
 
-
-
 def test_command():
 	'''
 	Description: A function to test the command line arguments
@@ -25,7 +23,7 @@ def test_command():
 @mock.patch.object(py, 'savefig')
 @mock.patch.object(py, 'plot')
 @mock.patch.object(GR, 'green_between')
-def test_chart():
+def test_chart(mock_show, mock_savefig, mock_plot, mock_green_between):
 	'''
 	Description: A function to test if the charting function is in operation
 	'''
